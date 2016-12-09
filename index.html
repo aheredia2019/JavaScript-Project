@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>BlackJack!</title>
+
+	<style type="text/css">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</style>
+
+</head>
+
+<body>
+<body background = "images/background_empty.png">
+
+	<input type="text" value="Bet Amount" name="betAmount">
+	<button type="button" onclick="bet()">Bet</button>
+	<p id="sum"></p>
+	
+	<img src="images/background.png" width=860px; style="max-width: 100%;display: block; margin-left: auto; margin-right: auto"> 
+	<script type="text/javascript">
+		
+	function bet(value){
+		var num1 = Math.floor((Math.random()*10) + 1);
+		var num2 = Math.floor((Math.random()*10) + 1);
+		if (num2 + num1 < 4) {
+			var sum = num1 + num2 + 2;
+		} else {
+			 var sum = num1 + num2;
+		}
+
+		document.getElementById("sum").innerHTML = "Sum: " + sum;
+	}
+
+	</script>
+	
+
+</body>
+
+</html>
